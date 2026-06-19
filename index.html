@@ -8,11 +8,14 @@
     :root {
       --gray-dark: #8f8f8f;
       --gray-mid: #a6a6a6;
-      --gray-light: #dddddd;
-      --border: #222;
+      --border: #222222;
       --pink: #ff147a;
       --white: #ffffff;
       --black: #000000;
+      --cell-bg: #efefef;
+      --summary-bg: #f7f7f7;
+      --page-bg: #f3f3f3;
+      --focus-bg: #fff8cc;
     }
 
     * {
@@ -21,32 +24,32 @@
 
     body {
       margin: 0;
-      background: #f3f3f3;
-      font-family: Arial, Helvetica, sans-serif;
+      padding: 24px;
       display: flex;
       justify-content: center;
-      padding: 24px;
-      color: #111;
+      background: var(--page-bg);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111111;
     }
 
     .app {
       width: 100%;
       max-width: 760px;
-      background: #fff;
+      background: var(--white);
       border: 2px solid var(--border);
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     }
 
     .title {
-      background: var(--gray-dark);
-      color: var(--white);
-      text-align: center;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
       padding: 10px 8px;
-      border-bottom: 2px solid var(--border);
+      text-align: center;
       font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--gray-dark);
+      border-bottom: 2px solid var(--border);
     }
 
     table {
@@ -55,20 +58,21 @@
       table-layout: fixed;
     }
 
-    th, td {
-      border: 1px solid var(--border);
+    th,
+    td {
       padding: 8px 8px;
       text-align: center;
       vertical-align: middle;
-      background: #efefef;
       font-size: 22px;
       line-height: 1.15;
+      border: 1px solid var(--border);
+      background: var(--cell-bg);
     }
 
     thead th {
-      background: var(--gray-mid);
-      color: var(--white);
       font-weight: 800;
+      color: var(--white);
+      background: var(--gray-mid);
     }
 
     .col-sales {
@@ -93,71 +97,73 @@
     }
 
     .section {
-      background: var(--gray-dark) !important;
-      color: var(--white);
-      font-weight: 800;
-      text-align: left;
       padding-left: 18px;
+      text-align: left;
+      font-weight: 800;
+      color: var(--white);
+      background: var(--gray-dark) !important;
     }
 
-    .qty-input {
+    .qty-input,
+    .custom-total-input {
       width: 100%;
-      border: none;
-      outline: none;
-      background: #ffffff;
-      text-align: center;
+      padding: 6px 4px;
       font-size: 22px;
       font-weight: 700;
-      padding: 6px 4px;
-      color: #111;
+      text-align: center;
+      color: #111111;
+      background: var(--white);
+      border: none;
+      outline: none;
     }
 
-    .qty-input:focus {
-      background: #fff8cc;
+    .qty-input:focus,
+    .custom-total-input:focus {
+      background: var(--focus-bg);
     }
 
     .money {
       font-weight: 400;
       color: var(--black);
-      background: #efefef;
+      background: var(--cell-bg);
     }
 
     .summary-label {
-      background: var(--gray-dark) !important;
-      color: var(--white);
+      text-align: center;
       font-weight: 800;
       text-transform: uppercase;
-      text-align: center;
+      color: var(--white);
+      background: var(--gray-dark) !important;
     }
 
     .summary-value {
       font-weight: 800;
-      background: #f7f7f7;
+      background: var(--summary-bg);
     }
 
     .hourly-label {
-      color: var(--pink);
-      font-weight: 700;
-      background: #efefef;
       text-align: center;
+      font-weight: 700;
+      color: var(--pink);
+      background: var(--cell-bg);
     }
 
     .controls {
       display: flex;
+      flex-wrap: wrap;
       gap: 12px;
       padding: 16px;
-      border-top: 2px solid var(--border);
       background: #fafafa;
-      flex-wrap: wrap;
+      border-top: 2px solid var(--border);
     }
 
     button {
-      border: 1px solid var(--border);
-      background: var(--gray-dark);
-      color: white;
+      padding: 10px 14px;
       font-size: 16px;
       font-weight: 700;
-      padding: 10px 14px;
+      color: var(--white);
+      background: var(--gray-dark);
+      border: 1px solid var(--border);
       cursor: pointer;
     }
 
@@ -168,7 +174,7 @@
     .note {
       padding: 0 16px 16px;
       font-size: 14px;
-      color: #555;
+      color: #555555;
     }
 
     @media (max-width: 700px) {
@@ -180,14 +186,16 @@
         font-size: 20px;
       }
 
-      th, td {
-        font-size: 14px;
+      th,
+      td {
         padding: 6px 4px;
+        font-size: 14px;
       }
 
-      .qty-input {
-        font-size: 14px;
+      .qty-input,
+      .custom-total-input {
         padding: 6px 2px;
+        font-size: 14px;
       }
 
       button {
@@ -213,49 +221,49 @@
         <tr data-rate="39">
           <td class="pink">Beyond Voice</td>
           <td class="pink">$39.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="29">
           <td class="pink">Voice</td>
           <td class="pink">$29.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="22">
           <td class="pink">Essential Voice</td>
           <td class="pink">$22.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="1">
           <td class="pink">Upgrades</td>
           <td class="pink">$1.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="5">
           <td class="pink">Tlife Assisted</td>
           <td class="pink">$5.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="20">
           <td class="pink">HINT</td>
           <td class="pink">$20.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="10">
           <td class="pink">PREMIUM BTS</td>
           <td class="pink">$10.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="5">
           <td class="pink">Sync Up</td>
           <td class="pink">$5.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
 
@@ -266,46 +274,46 @@
         <tr data-rate="25">
           <td class="pink">VISA App</td>
           <td class="pink">$25.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="13">
           <td class="pink">P360</td>
           <td class="pink">$13.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="15">
           <td class="pink">BYOD P360</td>
           <td class="pink">$15.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="8">
           <td class="pink">Hometech</td>
           <td class="pink">$8.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="2">
           <td class="pink">More LINE Mig</td>
           <td class="pink">$2.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
         <tr data-rate="4">
           <td class="pink">Beyond LINE Mig</td>
           <td class="pink">$4.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money row-total">$0.00</td>
         </tr>
-        <tr data-rate="0" data-custom="true">
+        <tr data-custom="true">
           <td class="pink">OEM Spiffs</td>
           <td class="pink">Varies</td>
-          <td><input class="qty-input custom-qty" type="number" min="0" step="1" value="0"></td>
+          <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
           <td class="money">
             <input
-              class="qty-input custom-total-input"
+              class="custom-total-input"
               type="number"
               min="0"
               step="0.01"
@@ -342,19 +350,11 @@
     }
 
     function calculateTotals() {
-      const rows = document.querySelectorAll("#table-body tr[data-rate]");
+      const standardRows = document.querySelectorAll("#table-body tr[data-rate]");
+      const customRow = document.querySelector('#table-body tr[data-custom="true"]');
       let grandTotal = 0;
 
-      rows.forEach((row) => {
-        const isCustom = row.dataset.custom === "true";
-
-        if (isCustom) {
-          const customTotalInput = row.querySelector(".custom-total-input");
-          const customValue = parseFloat(customTotalInput.value) || 0;
-          grandTotal += customValue;
-          return;
-        }
-
+      standardRows.forEach((row) => {
         const rate = parseFloat(row.dataset.rate) || 0;
         const qtyInput = row.querySelector(".qty-input");
         const rowTotalCell = row.querySelector(".row-total");
@@ -365,12 +365,20 @@
         grandTotal += total;
       });
 
+      if (customRow) {
+        const customTotalInput = customRow.querySelector(".custom-total-input");
+        const customValue = parseFloat(customTotalInput.value) || 0;
+        grandTotal += customValue;
+      }
+
+      const additionalHourly = grandTotal / 8;
+
       document.getElementById("grand-total").textContent = formatMoney(grandTotal);
-      document.getElementById("additional-hourly").textContent = formatMoney(grandTotal / 8);
+      document.getElementById("additional-hourly").textContent = formatMoney(additionalHourly);
     }
 
     function clearAll() {
-      document.querySelectorAll(".qty-input").forEach((input) => {
+      document.querySelectorAll(".qty-input, .custom-total-input").forEach((input) => {
         input.value = 0;
       });
 
@@ -382,352 +390,7 @@
       document.getElementById("additional-hourly").textContent = "$0.00";
     }
 
-    document.querySelectorAll(".qty-input").forEach((input) => {
-      input.addEventListener("input", calculateTotals);
-    });
-
-    document.getElementById("clear-btn").addEventListener("click", () => {
-      clearAll();
-      calculateTotals();
-    });
-
-    calculateTotals();
-  </script>
-</body>
-</html>      line-height: 1.15;
-    }
-
-    thead th {
-      background: var(--gray-mid);
-      color: var(--white);
-      font-weight: 800;
-    }
-
-    .col-sales {
-      width: 34%;
-    }
-
-    .col-rate {
-      width: 26%;
-    }
-
-    .col-qty {
-      width: 16%;
-    }
-
-    .col-total {
-      width: 24%;
-    }
-
-    .pink {
-      color: var(--pink);
-      font-weight: 700;
-    }
-
-    .section {
-      background: var(--gray-dark) !important;
-      color: var(--white);
-      font-weight: 800;
-      text-align: left;
-      padding-left: 18px;
-    }
-
-    .qty-input,
-    .hourly-input {
-      width: 100%;
-      border: none;
-      outline: none;
-      background: #ffffff;
-      text-align: center;
-      font-size: 22px;
-      font-weight: 700;
-      padding: 6px 4px;
-      color: #111;
-    }
-
-    .qty-input:focus,
-    .hourly-input:focus {
-      background: #fff8cc;
-    }
-
-    .money {
-      font-weight: 400;
-      color: var(--black);
-      background: #efefef;
-    }
-
-    .summary-label {
-      background: var(--gray-dark) !important;
-      color: var(--white);
-      font-weight: 800;
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    .summary-value {
-      font-weight: 800;
-      background: #f7f7f7;
-    }
-
-    .hourly-label {
-      color: var(--pink);
-      font-weight: 700;
-      background: #efefef;
-      text-align: center;
-    }
-
-    .controls {
-      display: flex;
-      gap: 12px;
-      padding: 16px;
-      border-top: 2px solid var(--border);
-      background: #fafafa;
-      flex-wrap: wrap;
-    }
-
-    button {
-      border: 1px solid var(--border);
-      background: var(--gray-dark);
-      color: white;
-      font-size: 16px;
-      font-weight: 700;
-      padding: 10px 14px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      filter: brightness(0.95);
-    }
-
-    .note {
-      padding: 0 16px 16px;
-      font-size: 14px;
-      color: #555;
-    }
-
-    @media (max-width: 700px) {
-      body {
-        padding: 8px;
-      }
-
-      .title {
-        font-size: 20px;
-      }
-
-      th, td {
-        font-size: 14px;
-        padding: 6px 4px;
-      }
-
-      .qty-input,
-      .hourly-input {
-        font-size: 14px;
-        padding: 6px 2px;
-      }
-
-      button {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="app">
-    <div class="title">SALE RECAP</div>
-
-    <table>
-      <thead>
-        <tr>
-          <th class="col-sales">Sales</th>
-          <th class="col-rate">Max Payout<br>with spiff</th>
-          <th class="col-qty">QTY SOLD</th>
-          <th class="col-total">TOTAL<br>PAYOUT</th>
-        </tr>
-      </thead>
-      <tbody id="table-body">
-        <tr data-rate="39">
-          <td class="pink">Beyond Voice</td>
-          <td class="pink">$39.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="29">
-          <td class="pink">Voice</td>
-          <td class="pink">$29.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="22">
-          <td class="pink">Essential Voice</td>
-          <td class="pink">$22.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="1">
-          <td class="pink">Upgrades</td>
-          <td class="pink">$1.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="5">
-          <td class="pink">Tlife Assisted</td>
-          <td class="pink">$5.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="20">
-          <td class="pink">HINT</td>
-          <td class="pink">$20.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="10">
-          <td class="pink">PREMIUM BTS</td>
-          <td class="pink">$10.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="5">
-          <td class="pink">Sync Up</td>
-          <td class="pink">$5.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-
-        <tr>
-          <td class="section" colspan="4">Feature Sales</td>
-        </tr>
-
-        <tr data-rate="25">
-          <td class="pink">VISA App</td>
-          <td class="pink">$25.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="13">
-          <td class="pink">P360</td>
-          <td class="pink">$13.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="15">
-          <td class="pink">BYOD P360</td>
-          <td class="pink">$15.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="8">
-          <td class="pink">Hometech</td>
-          <td class="pink">$8.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="2">
-          <td class="pink">More LINE Mig</td>
-          <td class="pink">$2.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="4">
-          <td class="pink">Beyond LINE Mig</td>
-          <td class="pink">$4.00</td>
-          <td><input class="qty-input" type="number" min="0" step="1" value="0"></td>
-          <td class="money row-total">$0.00</td>
-        </tr>
-        <tr data-rate="0" data-custom="true">
-          <td class="pink">OEM Spiffs</td>
-          <td class="pink">Varies</td>
-          <td><input class="qty-input custom-qty" type="number" min="0" step="1" value="0"></td>
-          <td class="money">
-            <input
-              class="hourly-input custom-total-input"
-              type="number"
-              min="0"
-              step="0.01"
-              value="0"
-              aria-label="OEM Spiffs total payout"
-            />
-          </td>
-        </tr>
-
-        <tr>
-          <td class="summary-label" colspan="3">TOTAL POTENTIAL COMMISSION</td>
-          <td class="summary-value" id="grand-total">$0.00</td>
-        </tr>
-        <tr>
-          <td class="hourly-label" colspan="3">Additional Hourly (8hr day)</td>
-          <td>
-            <input
-              id="additional-hourly"
-              class="hourly-input"
-              type="number"
-              min="0"
-              step="0.01"
-              value="0"
-            />
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="controls">
-      <button type="button" id="clear-btn">Clear All</button>
-    </div>
-
-    <div class="note">
-      Enter quantities for each item. OEM Spiffs can be entered directly as a payout amount.
-      The total commission includes all row payouts plus Additional Hourly.
-    </div>
-  </div>
-
-  <script>
-    function formatMoney(value) {
-      return "$" + Number(value).toFixed(2);
-    }
-
-    function calculateTotals() {
-      const rows = document.querySelectorAll("#table-body tr[data-rate]");
-      let grandTotal = 0;
-
-      rows.forEach((row) => {
-        const isCustom = row.dataset.custom === "true";
-
-        if (isCustom) {
-          const customTotalInput = row.querySelector(".custom-total-input");
-          const customValue = parseFloat(customTotalInput.value) || 0;
-          grandTotal += customValue;
-          return;
-        }
-
-        const rate = parseFloat(row.dataset.rate) || 0;
-        const qtyInput = row.querySelector(".qty-input");
-        const rowTotalCell = row.querySelector(".row-total");
-        const qty = parseFloat(qtyInput.value) || 0;
-        const total = rate * qty;
-
-        rowTotalCell.textContent = formatMoney(total);
-        grandTotal += total;
-      });
-
-      const additionalHourly = parseFloat(document.getElementById("additional-hourly").value) || 0;
-      grandTotal += additionalHourly;
-
-      document.getElementById("grand-total").textContent = formatMoney(grandTotal);
-    }
-
-    function clearAll() {
-      document.querySelectorAll(".qty-input, .hourly-input").forEach((input) => {
-        input.value = 0;
-      });
-
-      document.querySelectorAll(".row-total").forEach((cell) => {
-        cell.textContent = "$0.00";
-      });
-
-      document.getElementById("grand-total").textContent = "$0.00";
-    }
-
-    document.querySelectorAll(".qty-input, .hourly-input").forEach((input) => {
+    document.querySelectorAll(".qty-input, .custom-total-input").forEach((input) => {
       input.addEventListener("input", calculateTotals);
     });
 
