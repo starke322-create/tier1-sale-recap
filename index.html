@@ -20,9 +20,7 @@
       --success: #1f7a1f;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -145,9 +143,7 @@
       cursor: pointer;
     }
 
-    .rate-link:hover {
-      filter: brightness(0.85);
-    }
+    .rate-link:hover { filter: brightness(0.85); }
 
     .section {
       padding-left: 18px;
@@ -220,9 +216,7 @@
       cursor: pointer;
     }
 
-    button:hover {
-      filter: brightness(0.95);
-    }
+    button:hover { filter: brightness(0.95); }
 
     .note {
       padding: 0 16px 16px;
@@ -241,13 +235,10 @@
       color: #333;
     }
 
-    .hidden {
-      display: none !important;
-    }
+    .hidden { display: none !important; }
 
     @media (max-width: 700px) {
       body { padding: 8px; }
-
       .title { font-size: 20px; }
 
       th, td {
@@ -261,13 +252,9 @@
         font-size: 14px;
       }
 
-      button {
-        width: 100%;
-      }
+      button { width: 100%; }
 
-      .auth-actions {
-        width: 100%;
-      }
+      .auth-actions { width: 100%; }
 
       .auth-actions input[type="email"] {
         width: 100%;
@@ -316,73 +303,55 @@
         <tbody id="table-body">
           <tr data-rate="5">
             <td class="pink">Fast Start Voice</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Store must attain 105% or higher of Net Postpaid Voice target and 105% or higher of MTD target by 7/15/26.">$5.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="Store must attain 105% or higher of Net Postpaid Voice target and 105% or higher of MTD target by 7/15/26.">$5.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="39">
             <td class="pink">Beyond Voice</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% voice payout is $19 + Spiff payout of $10 if store ends month over 105% to voice target + Spiff payout of $10 for every Beyond activation.">$39.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="125% voice payout is $19 + Spiff payout of $10 if store ends month over 105% to voice target + Spiff payout of $10 for every Beyond activation.">$39.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="29">
             <td class="pink">Voice</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% voice payout is $19 + Spiff payout of $10 if store ends month over 105% to voice target.">$29.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="125% voice payout is $19 + Spiff payout of $10 if store ends month over 105% to voice target.">$29.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="22">
             <td class="pink">Essential Voice</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% voice payout is $19 + Spiff payout of $10 if store ends month over 105% to voice target - Essential Voice spiff of -$7.00.">$22.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="125% voice payout is $19 + Spiff payout of $10 if store ends month over 105% to voice target - Essential Voice spiff of -$7.00.">$22.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="1">
             <td class="pink">Upgrades</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Upgrade spiff is $1.00.">$1.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="Upgrade spiff is $1.00.">$1.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="5">
             <td class="pink">Tlife Assisted</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Tlife Assisted spiff is $5.00 if INDIVIDUAL T-Life is >65%. NOTE: T-Life Success Rate: (T-Life New Ban + T-Life Upgrade Success Rate + T-Life AAL Success Rate) / 3">$5.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="Tlife Assisted spiff is $5.00 if INDIVIDUAL T-Life is >65%. NOTE: T-Life Success Rate: (T-Life New Ban + T-Life Upgrade Success Rate + T-Life AAL Success Rate) / 3">$5.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="20">
             <td class="pink">HINT</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% bts payout is $8 + Premium BTS Spiff payout of $2 if store ends month over 110% to BTS target + HINT spiff payout of $10.">$20.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="125% bts payout is $8 + Premium BTS Spiff payout of $2 if store ends month over 110% to BTS target + HINT spiff payout of $10.">$20.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="10">
             <td class="pink">PREMIUM BTS</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% bts payout is $8 + Premium BTS Spiff payout of $2 if store ends month over 110% BTS.">$10.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="125% bts payout is $8 + Premium BTS Spiff payout of $2 if store ends month over 110% BTS.">$10.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="5">
             <td class="pink">Sync Up</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% bts payout is $8 - below $14.99 MRC spiff of -$3.">$5.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="125% bts payout is $8 - below $14.99 MRC spiff of -$3.">$5.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
@@ -393,67 +362,46 @@
 
           <tr data-rate="25">
             <td class="pink">VISA App</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="VISA application spiff is $25 for all applications if they are denied or if they are approved AND accept.">$25.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="VISA application spiff is $25 for all applications if they are denied or if they are approved AND accept.">$25.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="13">
             <td class="pink">P360</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Base P360 spiff payout is $8 + $5 spiff if store attachment is >40%. NOTE: (P360 Device Attach % + P360 BYOD Attach % + P360 Upgrade Attach %) / 3">$13.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="Base P360 spiff payout is $8 + $5 spiff if store attachment is >40%. NOTE: (P360 Device Attach % + P360 BYOD Attach % + P360 Upgrade Attach %) / 3">$13.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="15">
             <td class="pink">BYOD P360</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Base P360 spiff payout is $8 + $5 spiff if store attachment is >40% + $2.00 additional BYOD spiff. NOTE: (P360 Device Attach % + P360 BYOD Attach % + P360 Upgrade Attach %) / 3">$15.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="Base P360 spiff payout is $8 + $5 spiff if store attachment is >40% + $2.00 additional BYOD spiff. NOTE: (P360 Device Attach % + P360 BYOD Attach % + P360 Upgrade Attach %) / 3">$15.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="8">
             <td class="pink">Hometech</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="P360 Hometech spiff is $8.">$8.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="P360 Hometech spiff is $8.">$8.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="2">
             <td class="pink">More LINE Mig</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Migration to Experience More Per Line.">$2.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="Migration to Experience More Per Line.">$2.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-rate="4">
             <td class="pink">Beyond LINE Mig</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Migration to Experience Beyond Or Better Value Per Line.">$4.00</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="Migration to Experience Beyond Or Better Value Per Line.">$4.00</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money row-total">$0.00</td>
           </tr>
           <tr data-custom="true">
             <td class="pink">OEM Spiffs</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="3/15/26-6/30/26 ✓ GOOGLE PIXEL 10A EARN $5 ✓ GOOGLE PIXEL 10 EARN $25 ✓ GOOGLE PIXEL 10 PRO EARN $30 ✓ GOOGLE PIXEL 10 PRO XL EARN $35.">Varies</a>
-            </td>
+            <td class="pink"><a href="#" class="rate-link" data-message="3/15/26-6/30/26 ✓ GOOGLE PIXEL 10A EARN $5 ✓ GOOGLE PIXEL 10 EARN $25 ✓ GOOGLE PIXEL 10 PRO EARN $30 ✓ GOOGLE PIXEL 10 PRO XL EARN $35.">Varies</a></td>
             <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
             <td class="money">
-              <input
-                class="custom-total-input"
-                type="number"
-                min="0"
-                step="0.01"
-                value="0"
-                aria-label="OEM Spiffs total payout"
-              />
+              <input class="custom-total-input" type="number" min="0" step="0.01" value="0" aria-label="OEM Spiffs total payout" />
             </td>
           </tr>
 
@@ -481,9 +429,11 @@
 
   <script>
     // =========================
-    // LOGIN CONFIG (UPDATED)
+    // LOGIN CONFIG (MULTI EMAIL)
+    // Add/remove approved users here:
     // =========================
     const allowedEmails = [
+      "kevin.starke@connectivitysource.net",
       "montoya@connectivitysource.net",
       "beau.cumbie@connectivitysource.net",
       "belen@connectivitysource.net",
@@ -493,614 +443,7 @@
       "nicolas.odell@connectivitysource.net",
       "steven@connectivitysource.net",
       "erica@connectivitysource.net",
-      "kevin.starke@connectivitysource.net",
       "gilberto.castillo@connectivitysource.net"
-    ].map((e) => e.trim().toLowerCase());
-
-    // =========================
-    // ELEMENTS
-    // =========================
-    const authState = document.getElementById("auth-state");
-    const authEmail = document.getElementById("auth-email");
-    const authMessage = document.getElementById("auth-message");
-
-    const loginActions = document.getElementById("login-actions");
-    const logoutActions = document.getElementById("logout-actions");
-
-    const emailInput = document.getElementById("email-input");
-    const loginBtn = document.getElementById("login-btn");
-    const logoutBtn = document.getElementById("logout-btn");
-
-    const lockedOverlay = document.getElementById("locked-overlay");
-    const calculatorContent = document.getElementById("calculator-content");
-
-    // =========================
-    // LOGIN FUNCTIONS
-    // =========================
-    function normalizeEmail(email) {
-      return String(email || "").trim().toLowerCase();
-    }
-
-    function setMessage(text, type = "") {
-      authMessage.textContent = text;
-      authMessage.className = "auth-message";
-      if (type) authMessage.classList.add(type);
-    }
-
-    function showAuthorizedUI(email) {
-      authState.textContent = "Signed in as";
-      authEmail.textContent = ` ${email}`;
-      loginActions.classList.add("hidden");
-      logoutActions.classList.remove("hidden");
-      lockedOverlay.classList.add("hidden");
-      calculatorContent.classList.remove("hidden");
-    }
-
-    function showUnauthorizedUI() {
-      authState.textContent = "Not signed in";
-      authEmail.textContent = "";
-      loginActions.classList.remove("hidden");
-      logoutActions.classList.add("hidden");
-      lockedOverlay.classList.remove("hidden");
-      calculatorContent.classList.add("hidden");
-    }
-
-    function login(email) {
-      localStorage.setItem("authorizedUserEmail", email);
-      setMessage("Access granted.", "success");
-      showAuthorizedUI(email);
-      calculateTotals();
-    }
-
-    function logout() {
-      localStorage.removeItem("authorizedUserEmail");
-      emailInput.value = "";
-      setMessage("");
-      showUnauthorizedUI();
-    }
-
-    function handleLogin() {
-      const email = normalizeEmail(emailInput.value);
-
-      if (!email) {
-        setMessage("Please enter an email address.", "error");
-        return;
-      }
-
-      if (!email.includes("@")) {
-        setMessage("Please enter a valid email address.", "error");
-        return;
-      }
-
-      if (!allowedEmails.includes(email)) {
-        setMessage("Access denied. Your email is not authorized.", "error");
-        return;
-      }
-
-      login(email);
-    }
-
-    // =========================
-    // CALCULATOR FUNCTIONS
-    // =========================
-    function formatMoney(value) {
-      return "$" + Number(value).toFixed(2);
-    }
-
-    function calculateTotals() {
-      const standardRows = document.querySelectorAll("#table-body tr[data-rate]");
-      const customRow = document.querySelector('#table-body tr[data-custom="true"]');
-      let grandTotal = 0;
-
-      standardRows.forEach((row) => {
-        const rate = parseFloat(row.dataset.rate) || 0;
-        const qtyInput = row.querySelector(".qty-input");
-        const rowTotalCell = row.querySelector(".row-total");
-        const qty = parseFloat(qtyInput.value) || 0;
-        const total = rate * qty;
-
-        rowTotalCell.textContent = formatMoney(total);
-        grandTotal += total;
-      });
-
-      if (customRow) {
-        const customTotalInput = customRow.querySelector(".custom-total-input");
-        const customValue = parseFloat(customTotalInput.value) || 0;
-        grandTotal += customValue;
-      }
-
-      const additionalHourly = grandTotal / 8;
-      document.getElementById("grand-total").textContent = formatMoney(grandTotal);
-      document.getElementById("additional-hourly").textContent = formatMoney(additionalHourly);
-    }
-
-    function clearAll() {
-      document.querySelectorAll(".qty-input, .custom-total-input").forEach((input) => {
-        input.value = 0;
-      });
-
-      document.querySelectorAll(".row-total").forEach((cell) => {
-        cell.textContent = "$0.00";
-      });
-
-      document.getElementById("grand-total").textContent = "$0.00";
-      document.getElementById("additional-hourly").textContent = "$0.00";
-    }
-
-    // =========================
-    // EVENT LISTENERS
-    // =========================
-    loginBtn.addEventListener("click", handleLogin);
-
-    emailInput.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        handleLogin();
-      }
-    });
-
-    logoutBtn.addEventListener("click", logout);
-
-    document.querySelectorAll(".qty-input, .custom-total-input").forEach((input) => {
-      input.addEventListener("input", calculateTotals);
-    });
-
-    document.getElementById("clear-btn").addEventListener("click", () => {
-      clearAll();
-      calculateTotals();
-    });
-
-    document.querySelectorAll(".rate-link").forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        const message = link.dataset.message || "No details available.";
-        alert(message);
-      });
-    });
-
-    // =========================
-    // INITIALIZE
-    // =========================
-    calculateTotals();
-
-    // Force logout on every page load/refresh
-    localStorage.removeItem("authorizedUserEmail");
-
-    const savedEmail = normalizeEmail(localStorage.getItem("authorizedUserEmail"));
-    if (savedEmail && allowedEmails.includes(savedEmail)) {
-      showAuthorizedUI(savedEmail);
-      setMessage("");
-    } else {
-      showUnauthorizedUI();
-    }
-  </script>
-</body>
-</html>    }
-
-    .auth-actions {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .auth-actions input[type="email"] {
-      min-width: 220px;
-      padding: 8px 10px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      outline: none;
-      background: #fff;
-    }
-
-    .auth-actions input[type="email"]:focus {
-      border-color: #999;
-      background: var(--focus-bg);
-    }
-
-    .auth-message {
-      width: 100%;
-      font-size: 13px;
-      min-height: 16px;
-    }
-
-    .auth-message.error { color: var(--error); }
-    .auth-message.success { color: var(--success); }
-
-    .title {
-      padding: 10px 8px;
-      text-align: center;
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      color: var(--white);
-      background: var(--gray-dark);
-      border-bottom: 2px solid var(--border);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      table-layout: fixed;
-    }
-
-    th,
-    td {
-      padding: 8px 8px;
-      text-align: center;
-      vertical-align: middle;
-      font-size: 22px;
-      line-height: 1.15;
-      border: 1px solid var(--border);
-      background: var(--cell-bg);
-    }
-
-    thead th {
-      font-weight: 800;
-      color: var(--white);
-      background: var(--gray-mid);
-    }
-
-    .col-sales { width: 34%; }
-    .col-rate { width: 26%; }
-    .col-qty { width: 16%; }
-    .col-total { width: 24%; }
-
-    .pink {
-      color: var(--pink);
-      font-weight: 700;
-    }
-
-    .rate-link {
-      color: var(--pink);
-      font-weight: 700;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
-    .rate-link:hover {
-      filter: brightness(0.85);
-    }
-
-    .section {
-      padding-left: 18px;
-      text-align: left;
-      font-weight: 800;
-      color: var(--white);
-      background: var(--gray-dark) !important;
-    }
-
-    .qty-input,
-    .custom-total-input {
-      width: 100%;
-      padding: 6px 4px;
-      font-size: 22px;
-      font-weight: 700;
-      text-align: center;
-      color: #111111;
-      background: var(--white);
-      border: none;
-      outline: none;
-    }
-
-    .qty-input:focus,
-    .custom-total-input:focus {
-      background: var(--focus-bg);
-    }
-
-    .money {
-      font-weight: 400;
-      color: var(--black);
-      background: var(--cell-bg);
-    }
-
-    .summary-label {
-      text-align: center;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: var(--white);
-      background: var(--gray-dark) !important;
-    }
-
-    .summary-value {
-      font-weight: 800;
-      background: var(--summary-bg);
-    }
-
-    .hourly-label {
-      text-align: center;
-      font-weight: 700;
-      color: var(--pink);
-      background: var(--cell-bg);
-    }
-
-    .controls {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding: 16px;
-      background: #fafafa;
-      border-top: 2px solid var(--border);
-    }
-
-    button {
-      padding: 10px 14px;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--white);
-      background: var(--gray-dark);
-      border: 1px solid var(--border);
-      cursor: pointer;
-    }
-
-    button:hover {
-      filter: brightness(0.95);
-    }
-
-    .note {
-      padding: 0 16px 16px;
-      font-size: 14px;
-      color: #555555;
-    }
-
-    .locked-overlay {
-      padding: 22px 16px;
-      text-align: center;
-      font-size: 15px;
-      font-weight: 700;
-      border-top: 2px solid var(--border);
-      border-bottom: 2px solid var(--border);
-      background: #fffdf5;
-      color: #333;
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    @media (max-width: 700px) {
-      body { padding: 8px; }
-
-      .title { font-size: 20px; }
-
-      th, td {
-        padding: 6px 4px;
-        font-size: 14px;
-      }
-
-      .qty-input,
-      .custom-total-input {
-        padding: 6px 2px;
-        font-size: 14px;
-      }
-
-      button {
-        width: 100%;
-      }
-
-      .auth-actions {
-        width: 100%;
-      }
-
-      .auth-actions input[type="email"] {
-        width: 100%;
-        min-width: 0;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="app">
-    <!-- LOGIN/LOGOUT AREA MOVED TO VERY TOP -->
-    <div class="top-auth-bar">
-      <div class="auth-left">
-        Access:
-        <span id="auth-state">Not signed in</span>
-        <span id="auth-email" class="auth-email"></span>
-      </div>
-
-      <div class="auth-actions" id="login-actions">
-        <input id="email-input" type="email" placeholder="Enter authorized email" />
-        <button type="button" id="login-btn">Login</button>
-      </div>
-
-      <div class="auth-actions hidden" id="logout-actions">
-        <button type="button" id="logout-btn">Logout</button>
-      </div>
-
-      <div id="auth-message" class="auth-message"></div>
-    </div>
-
-    <div class="title">SALE RECAP</div>
-
-    <div id="locked-overlay" class="locked-overlay">
-      Please log in with an approved email to access the bonus calculator.
-    </div>
-
-    <div id="calculator-content" class="hidden">
-      <table>
-        <thead>
-          <tr>
-            <th class="col-sales">Sales</th>
-            <th class="col-rate">125% Payout<br>with spiffs</th>
-            <th class="col-qty">QTY SOLD</th>
-            <th class="col-total">TOTAL<br>PAYOUT</th>
-          </tr>
-        </thead>
-        <tbody id="table-body">
-          <tr data-rate="5">
-            <td class="pink">Fast Start Voice</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Store must attain 105% or higher of Net Postpaid Voice target and 105% or higher of MTD target by 7/15/26.">$5.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="39">
-            <td class="pink">Beyond Voice</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% voice payout is $19 + Spiff payout of $10 if store ends month over 105% to voice target + Spiff payout of $10 for every Beyond activation.">$39.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="29">
-            <td class="pink">Voice</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% voice payout is $19 + Spiff payout of $10 if store ends month over 105% to voice target.">$29.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="22">
-            <td class="pink">Essential Voice</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% voice payout is $19 + Spiff payout of $10 if store ends month over 105% to voice target - Essential Voice spiff of -$7.00.">$22.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="1">
-            <td class="pink">Upgrades</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Upgrade spiff is $1.00.">$1.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="5">
-            <td class="pink">Tlife Assisted</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Tlife Assisted spiff is $5.00 if INDIVIDUAL T-Life is >65%. NOTE: T-Life Success Rate: (T-Life New Ban + T-Life Upgrade Success Rate + T-Life AAL Success Rate) / 3">$5.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="20">
-            <td class="pink">HINT</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% bts payout is $8 + Premium BTS Spiff payout of $2 if store ends month over 110% to BTS target + HINT spiff payout of $10.">$20.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="10">
-            <td class="pink">PREMIUM BTS</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% bts payout is $8 + Premium BTS Spiff payout of $2 if store ends month over 110% BTS.">$10.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="5">
-            <td class="pink">Sync Up</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="125% bts payout is $8 - below $14.99 MRC spiff of -$3.">$5.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-
-          <tr>
-            <td class="section" colspan="4">Feature Sales</td>
-          </tr>
-
-          <tr data-rate="25">
-            <td class="pink">VISA App</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="VISA application spiff is $25 for all applications if they are denied or if they are approved AND accept.">$25.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="13">
-            <td class="pink">P360</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Base P360 spiff payout is $8 + $5 spiff if store attachment is >40%. NOTE: (P360 Device Attach % + P360 BYOD Attach % + P360 Upgrade Attach %) / 3">$13.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="15">
-            <td class="pink">BYOD P360</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Base P360 spiff payout is $8 + $5 spiff if store attachment is >40% + $2.00 additional BYOD spiff. NOTE: (P360 Device Attach % + P360 BYOD Attach % + P360 Upgrade Attach %) / 3">$15.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="8">
-            <td class="pink">Hometech</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="P360 Hometech spiff is $8.">$8.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="2">
-            <td class="pink">More LINE Mig</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Migration to Experience More Per Line.">$2.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-rate="4">
-            <td class="pink">Beyond LINE Mig</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="Migration to Experience Beyond Or Better Value Per Line.">$4.00</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money row-total">$0.00</td>
-          </tr>
-          <tr data-custom="true">
-            <td class="pink">OEM Spiffs</td>
-            <td class="pink">
-              <a href="#" class="rate-link" data-message="3/15/26-6/30/26 ✓ GOOGLE PIXEL 10A EARN $5 ✓ GOOGLE PIXEL 10 EARN $25 ✓ GOOGLE PIXEL 10 PRO EARN $30 ✓ GOOGLE PIXEL 10 PRO XL EARN $35.">Varies</a>
-            </td>
-            <td><input class="qty-input" type="number" min="0" step="1" value="0" /></td>
-            <td class="money">
-              <input
-                class="custom-total-input"
-                type="number"
-                min="0"
-                step="0.01"
-                value="0"
-                aria-label="OEM Spiffs total payout"
-              />
-            </td>
-          </tr>
-
-          <tr>
-            <td class="summary-label" colspan="3">TOTAL POTENTIAL COMMISSION</td>
-            <td class="summary-value" id="grand-total">$0.00</td>
-          </tr>
-          <tr>
-            <td class="hourly-label" colspan="3">Additional Hourly (8hr day)</td>
-            <td class="summary-value" id="additional-hourly">$0.00</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="controls">
-        <button type="button" id="clear-btn">Clear All</button>
-      </div>
-
-      <div class="note">
-        Enter quantities for each item. OEM Spiffs can be entered directly as a payout amount.
-        Additional Hourly is automatically calculated as total commission divided by 8. Click on payouts to see breakdown notes.
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // =========================
-    // LOGIN CONFIG (EDIT THIS)
-    // =========================
-    const allowedEmails = [
-      "kevin.starke@connectivitysource.net",
-      "manager2@company.com",
-      "employee1@company.com"
     ].map((e) => e.trim().toLowerCase());
 
     // =========================
